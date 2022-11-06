@@ -1,0 +1,77 @@
+.container{
+    width: 95%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.input{
+    padding: 0.3rem 0.8rem;
+    font-size: 15px;
+    border-radius: 2rem;
+    border: 1px solid black;
+}
+
+.flexColumn{
+    width: 40%;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.labelColumn{
+    margin: 0.3rem 0;
+    padding: 0 0.5rem;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+    margin: 0.9rem 0;
+    gap: 1rem;
+}
+.button{
+    font-size: 15px;
+    padding: 0.6rem 1rem;
+    border: 2px solid green;
+    background-color: white;
+    border-radius: 3rem;
+}
+.button:hover{
+    padding: 0.6rem 1rem;
+    font-size: 15px;
+    background-color: rgb(0, 48, 0);
+    color: white;
+    border: 2px solid rgb(0, 48, 0);
+}
+/* table */
+.tableDiv{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+table{
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+tr:nth-child(even){background-color: #f2f2f2;}
+  
+tr:hover {background-color: #ddd;}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #04AA6D;
+    color: white;
+  }

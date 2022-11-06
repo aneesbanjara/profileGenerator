@@ -1,0 +1,7 @@
+.cardDiv{
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 10px;
+}

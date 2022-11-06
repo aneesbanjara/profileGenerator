@@ -10,11 +10,14 @@
   
   .modal {
     position: fixed;
-    top: 30vh;
+    top: 10vh;
     left: 10%;
     width: 80%;
     z-index: 100;
     overflow: hidden;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
   }
   
   .header {
@@ -43,3 +46,18 @@
       width: 40rem;
     }
   }
+
+  .buttonRed{
+    font-size: 15px;
+    padding: 0.6rem 1rem;
+    border: 2px solid red;
+    background-color: white;
+    border-radius: 3rem;
+}
+.buttonRed:hover{
+  padding: 0.6rem 1rem;
+  font-size: 15px;
+  background-color: red;
+  color: white;
+  border: 2px solid red;
+}
