@@ -1,7 +1,15 @@
 import classes from "./EditModel.module.css";
 import ReactDom from "react-dom";
-const Backdrop = () => {
-  return <div className={classes.backdrop} />;
+const Backdrop = (props) => {
+  const { setShowEdit } = props;
+  return (
+    <div
+      className={classes.backdrop}
+      onClick={() => {
+        setShowEdit(false);
+      }}
+    />
+  );
 };
 
 const ModelOverlay = (props) => {
@@ -17,7 +25,7 @@ const ModelOverlay = (props) => {
     objectToBeUpdated.district = e.target[4].value;
     objectToBeUpdated.province = e.target[5].value;
     objectToBeUpdated.country = e.target[6].value;
-
+    localStorage.setItem("userData", JSON.stringify(dataArr));
     setShowEdit(false);
   };
   return (
@@ -136,7 +144,7 @@ const EditModel = (props) => {
   return (
     <>
       {ReactDom.createPortal(
-        <Backdrop />,
+        <Backdrop setShowEdit={setShowEdit} />,
         document.getElementById("backdrop-root")
       )}
       {ReactDom.createPortal(

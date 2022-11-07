@@ -12,8 +12,10 @@ function App() {
   const [showEdit, setShowEdit] = useState(false);
   useEffect(() => {
     const userData = localStorage.getItem("userData");
-    console.log(userData);
-    // setUserDataArr(userData);
+    console.log(JSON.parse(userData));
+    if (userData) {
+      setUserDataArr(JSON.parse(userData));
+    }
   }, []);
   const formSubmitHandler = (e) => {
     e.preventDefault();
@@ -27,15 +29,17 @@ function App() {
       province: e.target[5].value,
       country: e.target[6].value,
     };
+    console.log("from submit", userDataArr);
     const userDatas = [...userDataArr, data];
     setUserDataArr(userDatas);
-    localStorage.setItem("userData", userDatas);
+    localStorage.setItem("userData", JSON.stringify(userDatas));
   };
   const editHandler = () => {};
   const deleteHandler = (index) => {
     const userDatas = [...userDataArr];
     userDatas.splice(index, 1);
     setUserDataArr(userDatas);
+    localStorage.setItem("userData", JSON.stringify(userDatas));
   };
   const sortNameHandler = () => {
     const userDatas = [...userDataArr];
@@ -44,7 +48,7 @@ function App() {
     setUserDataArr(userDatas);
   };
   const listProfileHandler = () => {};
-  console.log(userDataArr);
+  console.log("console log", userDataArr);
   return (
     <>
       {showEdit && (

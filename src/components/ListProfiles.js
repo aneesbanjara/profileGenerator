@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditModel from "./EditModel";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
-import { GoLocation } from "react-icons/go";
+import { AiOutlinePhone, AiOutlineMail, AiFillEdit } from "react-icons/ai";
+import { GoLocation, GoScreenFull } from "react-icons/go";
 import classes from "./ListProfile.module.css";
 
 const ListProfiles = (props) => {
@@ -65,15 +65,22 @@ const ListProfiles = (props) => {
                         justifyContent: "center",
                       }}
                     >
-                      <button
-                        className="button"
-                        onClick={() => {
+                      <a
+                        href=""
+                        onClick={(e) => {
+                          e.preventDefault();
                           setRecord(data);
                           setShowEdit(true);
                         }}
+                        style={{
+                          margin: "0.5rem 0 0 0",
+                          border: "1px solid green",
+                          padding: "0.3rem 1rem",
+                          fontStyle: "unset",
+                        }}
                       >
                         Edit
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
